@@ -10,7 +10,12 @@ while cap.isOpened():
     if not ret:
         break
 
-    results = model(frame)
+    results = model.track(
+        frame,
+        persist=True,
+        tracker='bytetrack.yaml',
+        verbose=False
+    )
     annotated_frame = results[0].plot()
 
     cv2.imshow('Traffic Counter', annotated_frame)
