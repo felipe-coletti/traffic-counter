@@ -6,9 +6,15 @@
 *.avi
 *.mov
 
+# Output directories
+output/
+
 # Virtual environments
 venv/
 .venv/
+
+# Logs
+*.log
 
 # Python cache
 __pycache__/
